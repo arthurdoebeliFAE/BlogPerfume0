@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Radar • Blog de Perfumaria</title>
+  <meta name="description" content="Conteúdo moderno e democrático sobre perfumes: do contratipo ao nicho. Educação, reviews e um radar de feedbacks em tempo real." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="brand-badge" aria-hidden="true"></div> <span>Blog de Perfumaria • Radar UX</span></div>
+      <nav class="inline" aria-label="Navegação principal">
+        <a href="#blog">Blog</a>
+        <a href="#guia">Guias</a>
+        <a href="#feedback">Feedback Radar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Perfumaria, sem mistério. Do contratipo ao nicho, com credibilidade e proximidade.</h1>
+        <p class="subtitle">Conteúdo informativo, visual moderno e linguagem adaptável para três públicos:
+          <strong>custo‑benefício</strong>, <strong>exclusividade acessível</strong> e <strong>nicho sofisticado</strong>. Aqui você aprende sobre
+          fixação, projeção, ocasiões de uso e preços — e ainda opina no <em>Feedback Radar</em>.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#feedback">Deixe seu feedback</a>
+          <a class="btn" href="#blog">Explorar artigos</a>
+        </div>
+        <div class="divider"></div>
+        <div class="inline">
+          <span class="tag">Autoridade + Proximidade</span>
+          <span class="tag">Conteúdo gratuito (ads & parcerias)</span>
+          <span class="tag">Credibilidade para diferentes públicos</span>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Para quem é este blog?</h3>
+          <p class="subtitle">Jovens que buscam <strong>contratipos até R$150</strong>, adultos em busca de <strong>árabes/nacionais até R$500</strong> e executivos que preferem <strong>nicho acima de R$900</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Propósito</h3>
+          <p class="subtitle">Ajudar você a se conhecer melhor no mundo da perfumaria e a melhorar sua imagem pessoal, com conteúdo simples e confiável.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Artigos em Destaque</h2>
+      <div class="grid grid-3" aria-live="polite">
+        <article class="card post">
+          <div class="inline" role="listbox">
+            <span class="chip" aria-label="Categoria">Contratipos</span>
+            <span class="chip">Até R$150</span>
+          </div>
+          <h3>Top 5 contratipos que realmente <em>fixam</em> (e custam pouco)</h3>
+          <div class="meta">Leitura: 5 min • Guia prático</div>
+          <p class="excerpt">Selecionamos fragrâncias acessíveis que entregam boa projeção para o dia a dia. Entenda notas, ocasiões e quanto esperar de durabilidade.</p>
+        </article>
+        <article class="card post">
+          <div class="inline">
+            <span class="chip">Árabes & Nacionais</span>
+            <span class="chip">Até R$500</span>
+          </div>
+          <h3>Exclusividade acessível: 6 perfumes para marcar presença</h3>
+          <div class="meta">Leitura: 7 min • Comparativo</div>
+          <p class="excerpt">Perfumes com identidade forte, excelente custo-benefício e performance consistente. Veja quando usar e como combinar com o seu estilo.</p>
+        </article>
+        <article class="card post">
+          <div class="inline">
+            <span class="chip">Nicho</span>
+            <span class="chip">Acima de R$900</span>
+          </div>
+          <h3>Elegância imediata: 4 nichos que comunicam status</h3>
+          <div class="meta">Leitura: 6 min • Curadoria</div>
+          <p class="excerpt">Seleção criteriosa para ocasiões especiais. Notas raras, matérias-primas premium e assinatura olfativa inconfundível.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="guia">
+      <h2>Guias Rápidos</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Fixação x Projeção</h3>
+          <p class="subtitle">Fixação é quanto tempo o perfume dura na pele. Projeção é o quanto ele se "afasta" de você. Um pode ser alto sem o outro.</p>
+        </div>
+        <div class="card">
+          <h3>Ocasiões de Uso</h3>
+          <p class="subtitle">Trabalho? Prefira algo limpo e discreto. Noite? Notas mais densas. Academia? Leves e cítricos. Assinatura? Equilíbrio.</p>
+        </div>
+        <div class="card">
+          <h3>Tipos & Concentrações</h3>
+          <p class="subtitle">EDC < EDT < EDP < Parfum: tendência de mais concentração = mais potência (mas a composição também importa!).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback Radar</h2>
+      <p class="subtitle">Conte para nós: como está a qualidade do conteúdo? Seu feedback é público e ajuda a guiar os próximos posts.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Deixe seu feedback</h3>
+          <form id="feedbackForm" novalidate>
+            <div>
+              <label for="name">Seu nome</label>
+              <input id="name" name="name" type="text" placeholder="Ex.: Ana, João…" required aria-required="true" />
+              <div class="helper">Obrigatório. Usaremos apenas para exibir junto ao seu comentário.</div>
+            </div>
+            <div class="form-row" style="margin-top:12px">
+              <div>
+                <label for="rating">Nota (1 a 5)</label>
+                <select id="rating" name="rating" required aria-required="true">
+                  <option value="" disabled selected>Selecione…</option>
+                  <option value="5">5 — Excelente</option>
+                  <option value="4">4 — Muito bom</option>
+                  <option value="3">3 — Ok</option>
+                  <option value="2">2 — Fraco</option>
+                  <option value="1">1 — Ruim</option>
+                </select>
+              </div>
+              <div>
+                <label for="occasion">Ocasião do consumo</label>
+                <select id="occasion" name="occasion">
+                  <option value="geral" selected>Geral</option>
+                  <option value="contratipos">Contratipos</option>
+                  <option value="arabes">Árabes/Nacionais</option>
+                  <option value="nicho">Nicho</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top:12px">
+              <label for="comment">Comentário (opcional)</label>
+              <textarea id="comment" name="comment" placeholder="O que você mais curtiu? O que podemos melhorar?"></textarea>
+              <div class="helper">Seja respeitoso e objetivo. 😊</div>
+            </div>
+            <div class="inline" style="margin-top:14px">
+              <button class="btn btn-primary" type="submit">Enviar feedback</button>
+              <button class="btn" type="button" id="resetBtn" title="Limpa a lista e o LocalStorage">Limpar tudo</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="inline" style="justify-content:space-between;align-items:center">
+            <h3 style="margin:0">Dashboard de Notas</h3>
+            <label class="inline small"><input type="checkbox" id="chartUsesFilter"> Chart usa filtros</label>
+          </div>
+          <canvas id="ratingChart" aria-label="Gráfico de distribuição das notas" role="img"></canvas>
+          <div class="helper" style="margin-top:8px">Distribuição das notas 1–5. Atualiza automaticamente a cada novo feedback.</div>
+          <div class="divider"></div>
+          <div class="toolbar" aria-label="Filtros de notas">
+            <button class="btn" data-preset="all">Todas</button>
+            <button class="btn" data-preset="high">Só 4 e 5</button>
+            <button class="btn" data-preset="mid">Só 3</button>
+            <button class="btn" data-preset="low">Até 2</button>
+          </div>
+          <div class="inline" style="margin-top:10px;gap:14px">
+            <label class="inline small"><input type="checkbox" class="filterChk" value="5" checked> 5</label>
+            <label class="inline small"><input type="checkbox" class="filterChk" value="4" checked> 4</label>
+            <label class="inline small"><input type="checkbox" class="filterChk" value="3" checked> 3</label>
+            <label class="inline small"><input type="checkbox" class="filterChk" value="2" checked> 2</label>
+            <label class="inline small"><input type="checkbox" class="filterChk" value="1" checked> 1</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <div class="inline" style="justify-content:space-between;align-items:center">
+          <h3 style="margin:0">Feedbacks da Comunidade</h3>
+          <span class="small" id="countLabel">0 feedback(s)</span>
+        </div>
+        <div id="feedbackList" class="grid" style="margin-top:12px"></div>
+        <div class="empty" id="emptyState" hidden>Nenhum feedback ainda. Seja o primeiro a opinar! 💬</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h3>Monetização & Transparência</h3>
+        <p class="subtitle">Todo o conteúdo é gratuito para o público. A manutenção do blog é viabilizada por <strong>anúncios e parcerias</strong>, sempre com critério editorial e sem assinaturas pagas.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="divider"></div>
+      <div class="inline" style="justify-content:space-between;align-items:center">
+        <span class="small">© <span id="year"></span> Blog de Perfumaria • Radar UX — Feito com ❤️ e boas práticas de UX</span>
+        <a class="small" href="#feedback">Deixe seu feedback</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Feedback enviado. Obrigado por contribuir! 🎉</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
